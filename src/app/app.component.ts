@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: ` <all-component></all-component> `,
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'AngularGita';

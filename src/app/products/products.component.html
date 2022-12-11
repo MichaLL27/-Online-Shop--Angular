@@ -1,0 +1,40 @@
+<div class="main">
+  <div class="main__title">
+    <h1 class="main__title__text">Products</h1>
+    <button class="main__title__btn">Show Filter</button>
+  </div>
+  <div class="main__information">
+    <div class="main__information__name">
+      <h4>Products Name</h4>
+    </div>
+    <div class="main__information__number"><h4>Product Number</h4></div>
+    <div class="main__information__color"><h4>Color</h4></div>
+    <div class="main__information__price"><h4>List Price</h4></div>
+    <div class="main__information__date"><h4>Modified Date</h4></div>
+    <div class="main__information__actions"><h4>Actions</h4></div>
+  </div>
+  <div class="main__informations" *ngFor="let item of items">
+    <div class="main__informations__name">
+      <h4>{{ item.name }}</h4>
+    </div>
+    <div class="main__informations__number">
+      <h4>{{ item.number }}</h4>
+    </div>
+    <div class="main__informations__color">
+      <h4>{{ item.color }}</h4>
+    </div>
+    <div class="main__informations__price">
+      <h4>{{ item.price }}</h4>
+    </div>
+    <div class="main__informations__date">
+      <h4>{{ item.date }}</h4>
+    </div>
+    <div class="main__informations__actions">
+      <a href="" class="main__informations__actions__edit">Edit</a>
+      <a href="" class="main__informations__actions__delete">Delete</a>
+    </div>
+  </div>
+  <div class="main__href">
+    <a href="" class="main__href__text">Create New Product</a>
+  </div>
+</div>

@@ -1,0 +1,142 @@
+.main {
+  width: 85vw;
+  height: 70vh;
+  &__title {
+    width: 85vw;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__text {
+      font-size: 40px;
+    }
+    &__btn {
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: white;
+      color: rgb(152, 156, 158);
+      border: 1px solid rgb(152, 156, 158);
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+  &__information {
+    width: 85vw;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(152, 156, 158);
+    font-family: "Roboto", sans-serif;
+
+    &__name {
+      width: 18vw;
+      align-items: center;
+    }
+    &__number {
+      width: 18vw;
+      align-items: center;
+    }
+    &__color {
+      width: 5vw;
+      align-items: center;
+    }
+    &__price {
+      width: 8vw;
+      align-items: center;
+    }
+    &__date {
+      width: 18vw;
+      align-items: center;
+    }
+    &__actions {
+      width: 18vw;
+      align-items: center;
+    }
+  }
+  &__informations {
+    width: 85vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(152, 156, 158);
+    font-family: "Work Sans", sans-serif;
+
+    font-weight: 400;
+    font-size: 13px;
+    color: rgb(134, 134, 134);
+
+    &__name {
+      width: 18vw;
+      align-items: center;
+    }
+    &__number {
+      width: 18vw;
+      align-items: center;
+    }
+    &__color {
+      width: 5vw;
+      align-items: center;
+    }
+    &__price {
+      width: 8vw;
+      align-items: center;
+    }
+    &__date {
+      width: 18vw;
+      align-items: center;
+    }
+    &__actions {
+      width: 18vw;
+      display: flex;
+      align-items: center;
+
+      &__edit {
+        text-decoration: none;
+        color: white;
+        padding: 11px 8px 11px 8px;
+        background-color: grey;
+        border-radius: 4px;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+      }
+      &__delete {
+        margin: 4px;
+        text-decoration: none;
+        color: white;
+        padding: 8px 8px 8px 8px;
+        background-color: rgb(255, 0, 0);
+        border-radius: 4px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+      }
+    }
+  }
+  &__href {
+    width: 140px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__text {
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: rgb(27, 110, 194);
+      text-decoration: none;
+      color: white;
+      border-radius: 6px;
+    }
+  }
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
