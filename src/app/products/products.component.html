@@ -13,7 +13,13 @@
     <div class="main__information__date"><h4>Modified Date</h4></div>
     <div class="main__information__actions"><h4>Actions</h4></div>
   </div>
-  <div class="main__informations" *ngFor="let item of items">
+  <div
+    class="main__informations"
+    *ngFor="let item of items"
+    [ngStyle]="{
+      'background-color': item.length % 2 === 0 ? '#f2f2f2' : '#ffffff'
+    }"
+  >
     <div class="main__informations__name">
       <h4>{{ item.name }}</h4>
     </div>
@@ -30,7 +36,12 @@
       <h4>{{ item.date }}</h4>
     </div>
     <div class="main__informations__actions">
-      <a href="" class="main__informations__actions__edit">Edit</a>
+      <a
+        href=""
+        class="main__informations__actions__edit"
+        [routerLink]="['/products/edit']"
+        >Edit</a
+      >
       <a href="" class="main__informations__actions__delete">Delete</a>
     </div>
   </div>

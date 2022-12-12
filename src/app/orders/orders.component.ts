@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  template: `
-    <div>
-      <h1>Orders Page</h1>
-    </div>
-  `,
+  templateUrl: 'orders.component.html',
+  styleUrls: ['./orders.component.scss'],
 })
 export class OrdersComponent {}

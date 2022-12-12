@@ -1,0 +1,17 @@
+.customers {
+  width: 400px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  &__img {
+    width: 200px;
+    height: 200px;
+  }
+  &__child {
+    justify-content: center;
+    &__text {
+      text-decoration: none;
+    }
+  }
+}
