@@ -39,13 +39,15 @@
       <a
         href=""
         class="main__informations__actions__edit"
-        [routerLink]="['/products/edit']"
+        [routerLink]="['/products/edit/{{item.id}}']"
         >Edit</a
       >
       <a href="" class="main__informations__actions__delete">Delete</a>
     </div>
   </div>
   <div class="main__href">
-    <a href="" class="main__href__text">Create New Product</a>
+    <a href="" class="main__href__text" [routerLink]="['/products/new']"
+      >Create New Product</a
+    >
   </div>
 </div>

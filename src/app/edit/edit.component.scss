@@ -1,0 +1,69 @@
+.form__texts {
+  display: flex;
+  align-items: center;
+  width: 600px;
+  justify-content: space-between;
+  height: 40px;
+  margin: 20px;
+  &__input {
+    width: 400px;
+    height: 30px;
+    border-color: black;
+    border-radius: 5px;
+  }
+  &__input:hover {
+    border-color: blue;
+  }
+}
+.form {
+  width: auto;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  &__btn {
+    width: 620px;
+    height: 200px;
+    display: flex;
+    justify-content: flex-end;
+    &__save {
+      background-color: rgb(40, 167, 69);
+      border: none;
+      color: white;
+      width: 50px;
+      height: 40px;
+      margin: 5px;
+      font-size: 14px;
+    }
+    &__back {
+      background-color: rgb(108, 117, 125);
+      text-decoration: none;
+      border: none;
+      color: white;
+      width: 100px;
+      height: 40px;
+      margin: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    &__delete {
+      background-color: rgb(220, 53, 69);
+      border: none;
+      color: white;
+      width: 70px;
+      height: 40px;
+      margin: 5px;
+      font-size: 14px;
+    }
+    &__same {
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  }
+}
+
+h5 {
+  color: rgb(88, 74, 61);
+  font-size: 15px;
+}
