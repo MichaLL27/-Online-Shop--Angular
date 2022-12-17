@@ -22,11 +22,10 @@ export class DeleteComponent implements OnInit {
     this.course = this.itemService.items.find((x) => x.id == this.courseId);
     this.allCourse = this.itemService.items;
     this.currentCourse = this.courseId - 1;
-    console.log(this.courseId, this.course);
   }
   deleteBtn() {
     if (this.allCourse.splice(this.currentCourse, 1)) {
-      this.allCourse.map((x, i) => (x.id = i + 1));
+      this.itemService.fixIds();
     }
     this.router.navigateByUrl('/products');
   }

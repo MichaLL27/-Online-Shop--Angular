@@ -177,4 +177,8 @@ export class ItemsService {
       weight: 1016,
     },
   ];
+
+  fixIds() {
+    this.items.map((x, i) => (x.id = i + 1));
+  }
 }
