@@ -6,4 +6,7 @@ export interface Item {
   price: string;
   date: string;
   actions: string;
+  cost: number;
+  size: number;
+  weight: number;
 }

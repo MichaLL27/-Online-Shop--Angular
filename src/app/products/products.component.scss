@@ -1,6 +1,7 @@
 .main {
   width: 85vw;
-  height: 70vh;
+  height: auto;
+
   &__title {
     width: 85vw;
     height: 100px;
@@ -16,12 +17,13 @@
       padding-top: 10px;
       padding-bottom: 10px;
       background-color: white;
-      color: rgb(152, 156, 158);
-      border: 1px solid rgb(152, 156, 158);
+      color: rgb(125, 154, 168);
+      border: 1px solid rgb(125, 154, 168);
       text-align: center;
       text-decoration: none;
       display: inline-block;
       cursor: pointer;
+      border-radius: 4px;
     }
   }
   &__information {
@@ -70,7 +72,6 @@
     font-weight: 400;
     font-size: 13px;
     color: rgb(103, 124, 133);
-
     &__name {
       width: 18vw;
       align-items: center;
@@ -138,9 +139,45 @@
       border-radius: 6px;
     }
   }
+  &__true {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 10px;
+    &__input {
+      width: 200px;
+      height: 20px;
+      margin-left: 3px;
+    }
+    &__inputs {
+      width: 100px;
+      height: 20px;
+      margin-left: 3px;
+    }
+  }
 }
 
 h4 {
   margin: 0;
   padding: 0;
+}
+
+.texts {
+  font-weight: lighter;
+  color: black;
+  font-size: 14px;
+}
+
+h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
+  margin: 3px;
+}
+
+.height {
+  height: 66vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }

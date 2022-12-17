@@ -3,17 +3,16 @@
   align-items: center;
   width: 600px;
   justify-content: space-between;
-  height: 40px;
+  height: 30px;
   margin: 20px;
   &__input {
     width: 400px;
     height: 30px;
-    border-color: black;
-    border-radius: 5px;
+    border: 1px solid rgb(152, 156, 158);
   }
-  &__input:hover {
-    border-color: blue;
-  }
+  // &__input:hover {
+  //   border-color: blue;
+  // }
 }
 .form {
   width: auto;
@@ -66,4 +65,5 @@
 h5 {
   color: rgb(88, 74, 61);
   font-size: 15px;
+  font-weight: lighter;
 }

@@ -10,7 +10,7 @@ export const appRoutes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'products/edit/:id', component: EditComponent },
   { path: 'products/new', component: NewProduct },
-  { path: 'products/delete', component: DeleteComponent },
+  { path: 'products/delete/:id', component: DeleteComponent },
   { path: 'customers', component: CustomersComponent },
   { path: 'orders', component: OrdersComponent },
   { path: '', redirectTo: 'products', pathMatch: 'full' },

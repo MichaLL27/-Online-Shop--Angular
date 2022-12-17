@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProductsComponent } from '../products/products.component';
+import { ItemsService } from '../items.service';
 
 @Component({
   templateUrl: 'edit.component.html',
@@ -10,15 +10,12 @@ export class EditComponent implements OnInit {
   course: any;
   courseId: any;
   constructor(
-    private activateRoute: ActivatedRoute
-  ) // private productComponent: ProductsComponent
-  {}
+    private activateRoute: ActivatedRoute,
+    private itemService: ItemsService
+  ) {}
 
   ngOnInit(): void {
-    // this.courseId = this.activateRoute.snapshot.paramMap.get('id');
-    this.courseId = this.activateRoute.snapshot.params['id'];
-    // this.course = this.productComponent.items.find(
-    //   (x) => x.id == this.courseId
-    // );
+    this.courseId = this.activateRoute.snapshot.paramMap.get('id');
+    this.course = this.itemService.items.find((x) => x.id == this.courseId);
   }
 }

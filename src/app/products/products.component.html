@@ -1,7 +1,51 @@
 <div class="main">
   <div class="main__title">
     <h1 class="main__title__text">Products</h1>
-    <button class="main__title__btn">Show Filter</button>
+    <button class="main__title__btn" (click)="toggleImage()">
+      {{ showImage ? "Hide" : "Show" }} Filter
+    </button>
+  </div>
+  <div *ngIf="showImage">
+    <div class="main__true">
+      <div>
+        <h5>Name:</h5>
+      </div>
+      <input
+        class="main__true__input"
+        type="text"
+        id="fname"
+        name="fname"
+        [value]="course.date"
+      />
+      <div>
+        <h5>And price between:</h5>
+      </div>
+      <input
+        class="main__true__inputs"
+        type="text"
+        id="fname"
+        name="fname"
+        [value]="course.date"
+      />
+      <div>
+        <h5>and</h5>
+      </div>
+      <input
+        class="main__true__inputs"
+        type="text"
+        id="fname"
+        name="fname"
+        [value]="course.date"
+      />
+      <input
+        class="main__true__inputs"
+        type="text"
+        id="fname"
+        name="fname"
+        [value]="course.date"
+        placeholder="Apply"
+      />
+    </div>
   </div>
   <div class="main__information">
     <div class="main__information__name">
@@ -13,36 +57,43 @@
     <div class="main__information__date"><h4>Modified Date</h4></div>
     <div class="main__information__actions"><h4>Actions</h4></div>
   </div>
-  <div
-    class="main__informations"
-    *ngFor="let item of items"
-    [ngStyle]="{
-      'background-color': item.length % 2 === 0 ? '#f2f2f2' : '#ffffff'
-    }"
-  >
-    <div class="main__informations__name">
-      <h4>{{ item.name }}</h4>
-    </div>
-    <div class="main__informations__number">
-      <h4>{{ item.number }}</h4>
-    </div>
-    <div class="main__informations__color">
-      <h4>{{ item.color }}</h4>
-    </div>
-    <div class="main__informations__price">
-      <h4>{{ item.price }}</h4>
-    </div>
-    <div class="main__informations__date">
-      <h4>{{ item.date }}</h4>
-    </div>
-    <div class="main__informations__actions">
-      <a
-        href=""
-        class="main__informations__actions__edit"
-        [routerLink]="['/products/edit/{{item.id}}']"
-        >Edit</a
-      >
-      <a href="" class="main__informations__actions__delete">Delete</a>
+  <div class="height">
+    <div
+      class="main__informations"
+      *ngFor="let item of items; let i = index"
+      [ngStyle]="{
+        'background-color': i % 2 === 0 ? '#f2f2f2' : '#ffffff'
+      }"
+    >
+      <div class="main__informations__name">
+        <h4 class="texts">{{ item.name }}</h4>
+      </div>
+      <div class="main__informations__number">
+        <h4 class="texts">{{ item.number }}</h4>
+      </div>
+      <div class="main__informations__color">
+        <h4 class="texts">{{ item.color }}</h4>
+      </div>
+      <div class="main__informations__price">
+        <h4 class="texts">{{ item.price }}</h4>
+      </div>
+      <div class="main__informations__date">
+        <h4 class="texts">{{ item.date }}</h4>
+      </div>
+      <div class="main__informations__actions">
+        <a
+          href=""
+          class="main__informations__actions__edit"
+          [routerLink]="['/products/edit/', item.id]"
+          >Edit</a
+        >
+        <a
+          href=""
+          class="main__informations__actions__delete"
+          [routerLink]="['/products/delete/', item.id]"
+          >Delete</a
+        >
+      </div>
     </div>
   </div>
   <div class="main__href">

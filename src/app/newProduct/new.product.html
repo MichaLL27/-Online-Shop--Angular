@@ -12,7 +12,7 @@
             type="text"
             id="fname"
             name="fname"
-            value="John"
+            value=""
           />
         </div>
         <div class="form__texts">
@@ -24,7 +24,7 @@
             type="text"
             id="fname"
             name="fname"
-            value="John"
+            value=""
           />
         </div>
         <div class="form__texts">
@@ -36,7 +36,7 @@
             type="text"
             id="fname"
             name="fname"
-            value="John"
+            value=""
           />
         </div>
         <div class="form__texts">
@@ -48,7 +48,7 @@
             type="text"
             id="fname"
             name="fname"
-            value="John"
+            value=""
           />
         </div>
         <div class="form__texts">
@@ -60,7 +60,7 @@
             type="text"
             id="fname"
             name="fname"
-            value="John"
+            value=""
           />
         </div>
         <div class="form__texts">
@@ -72,7 +72,7 @@
             type="text"
             id="fname"
             name="fname"
-            value="John"
+            value=""
           />
         </div>
         <div class="form__texts">
@@ -84,7 +84,7 @@
             type="text"
             id="fname"
             name="fname"
-            value="John"
+            value=""
           />
         </div>
         <div class="form__texts">
@@ -93,10 +93,12 @@
           </div>
           <input
             class="form__texts__input"
-            type="text"
+            type="date"
             id="fname"
             name="fname"
-            value="John"
+            value="2022-12-17"
+            min="2022-12-17"
+            max="2023-01-31"
           />
         </div>
         <div class="form__btn">
@@ -104,11 +106,14 @@
             class="form__btn__save form__btn__same"
             type="submit"
             value="Save"
+            (click)="onNewItem()"
           />
           <a class="form__btn__back form__btn__same" href="products"
             >Back To List</a
           >
-          <button class="form__btn__delete form__btn__same">Delete</button>
+          <button class="form__btn__delete form__btn__same" (click)="calncel()">
+            Cancel
+          </button>
         </div>
       </div>
     </form>

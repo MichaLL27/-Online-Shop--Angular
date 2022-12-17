@@ -1,0 +1,120 @@
+<div class="delete">
+  <h1>Confirm Delete Product</h1>
+  <div class="delete__question">
+    <h1>Are you sure u want to delete the next product?</h1>
+  </div>
+  <div class="delete__product">
+    <div class="delete__product__containers">
+      <div class="delete__product__containers__flex">
+        <div class="delete__product__containers__tittle">
+          <h4>ProductId:</h4>
+        </div>
+        <div class="delete__product__containers__info">
+          <h4 class="delete__product__containers__info__text">
+            {{ course.id }}
+          </h4>
+        </div>
+      </div>
+      <div class="delete__product__containers__flex">
+        <div class="delete__product__containers__tittle">
+          <h4>Name:</h4>
+        </div>
+        <div class="delete__product__containers__info">
+          <h4 class="delete__product__containers__info__text">
+            {{ course.name }}
+          </h4>
+        </div>
+      </div>
+      <div class="delete__product__containers__flex">
+        <div class="delete__product__containers__tittle">
+          <h4>ProducNumber:</h4>
+        </div>
+        <div class="delete__product__containers__info">
+          <h4 class="delete__product__containers__info__text">
+            {{ course.number }}
+          </h4>
+        </div>
+      </div>
+      <div class="delete__product__containers__flex">
+        <div class="delete__product__containers__tittle">
+          <h4>Color:</h4>
+        </div>
+        <div class="delete__product__containers__info">
+          <h4 class="delete__product__containers__info__text">
+            {{ course.color }}
+          </h4>
+        </div>
+      </div>
+      <div class="delete__product__containers__flex">
+        <div class="delete__product__containers__tittle">
+          <h4>StandartCost:</h4>
+        </div>
+        <div class="delete__product__containers__info">
+          <h4 class="delete__product__containers__info__text">
+            {{ course.cost }}
+          </h4>
+        </div>
+      </div>
+      <div class="delete__product__containers__flex">
+        <div class="delete__product__containers__tittle">
+          <h4>ListPrice:</h4>
+        </div>
+        <div class="delete__product__containers__info">
+          <h4 class="delete__product__containers__info__text">
+            {{ course.price }}
+          </h4>
+        </div>
+      </div>
+      <div class="delete__product__containers__flex">
+        <div class="delete__product__containers__tittle">
+          <h4>Size:</h4>
+        </div>
+        <div class="delete__product__containers__info">
+          <h4 class="delete__product__containers__info__text">
+            {{ course.size }}
+          </h4>
+        </div>
+      </div>
+      <div class="delete__product__containers__flex">
+        <div class="delete__product__containers__tittle">
+          <h4>Weight:</h4>
+        </div>
+        <div class="delete__product__containers__info">
+          <h4 class="delete__product__containers__info__text">
+            {{ course.weight }}
+          </h4>
+        </div>
+      </div>
+      <div class="delete__product__containers__flexs">
+        <div class="delete__product__containers__tittle">
+          <h4>ProductCategoryId:</h4>
+        </div>
+        <div class="delete__product__containers__info">
+          <h4 class="delete__product__containers__info__texts">
+            {{ course.id }}
+          </h4>
+          <h4 class="delete__product__containers__info__texts">
+            {{ course.id }}
+          </h4>
+          <h4 class="delete__product__containers__info__texts">
+            17/12/2022 00:00:00
+          </h4>
+          <h4 class="delete__product__containers__info__texts">
+            01/01/2023 00:00:00
+          </h4>
+        </div>
+        <div class="delete__product__containers__infos">
+          <input
+            class="delete__product__containers__infos__delete"
+            type="submit"
+            value="Delete the Product!"
+            (click)="deleteBtn()"
+          />
+          <a class="delete__product__containers__infos__cancel" href="products"
+            >Cancel - Back to List</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

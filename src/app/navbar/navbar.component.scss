@@ -28,9 +28,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      font-weight: lighter;
+
       &__texts {
         text-decoration: none;
         color: black;
+        font-weight: lighter;
       }
     }
   }

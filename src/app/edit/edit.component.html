@@ -10,9 +10,9 @@
           <input
             class="form__texts__input"
             type="text"
-            id="fname"
+            [id]="course.id"
             name="fname"
-            value="John"
+            [value]="course.name"
           />
         </div>
         <div class="form__texts">
@@ -22,9 +22,9 @@
           <input
             class="form__texts__input"
             type="text"
-            id="fname"
+            [id]="course.id"
             name="fname"
-            value="John"
+            [value]="course.number"
           />
         </div>
         <div class="form__texts">
@@ -34,9 +34,9 @@
           <input
             class="form__texts__input"
             type="text"
-            id="fname"
+            [id]="course.id"
             name="fname"
-            value="John"
+            [value]="course.color"
           />
         </div>
         <div class="form__texts">
@@ -46,9 +46,9 @@
           <input
             class="form__texts__input"
             type="text"
-            id="fname"
+            [id]="course.id"
             name="fname"
-            value="John"
+            [value]="course.cost"
           />
         </div>
         <div class="form__texts">
@@ -58,9 +58,9 @@
           <input
             class="form__texts__input"
             type="text"
-            id="fname"
+            [id]="course.id"
             name="fname"
-            value="John"
+            [value]="course.price"
           />
         </div>
         <div class="form__texts">
@@ -70,9 +70,9 @@
           <input
             class="form__texts__input"
             type="text"
-            id="fname"
+            [id]="course.id"
             name="fname"
-            value="John"
+            [value]="course.size"
           />
         </div>
         <div class="form__texts">
@@ -82,9 +82,9 @@
           <input
             class="form__texts__input"
             type="text"
-            id="fname"
+            [id]="course.id"
             name="fname"
-            value="John"
+            [value]="course.weight"
           />
         </div>
         <div class="form__texts">
@@ -93,10 +93,12 @@
           </div>
           <input
             class="form__texts__input"
-            type="text"
-            id="fname"
+            type="date"
+            [id]="course.id"
             name="fname"
-            value="John"
+            value="2022-12-17"
+            min="2022-12-17"
+            max="2023-01-31"
           />
         </div>
         <div class="form__btn">
