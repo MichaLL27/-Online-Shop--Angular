@@ -5,9 +5,6 @@ import { Item } from './products/item.model';
   providedIn: 'root',
 })
 export class ItemsService {
-  unshift(data: any) {
-    throw new Error('Method not implemented.');
-  }
   constructor() {}
 
   items: Item[] = [
