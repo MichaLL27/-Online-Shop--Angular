@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ItemsService } from '../items.service';
-import { Item } from './item.model';
+import { EditComponent } from '../edit/edit.component';
 
 @Component({
   templateUrl: 'products.component.html',
@@ -8,6 +8,7 @@ import { Item } from './item.model';
 })
 export class ProductsComponent {
   showImage: boolean = false;
+  filteredProducts: any;
   toggleImage(): void {
     this.showImage = !this.showImage;
   }

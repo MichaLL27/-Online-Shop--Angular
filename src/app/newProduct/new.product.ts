@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ItemsService } from '../items.service';
@@ -8,6 +8,7 @@ import { ItemsService } from '../items.service';
   styleUrls: ['./new.product.scss'],
 })
 export class NewProduct implements OnInit {
+
   newProduct = new FormGroup({
     name: new FormControl(''),
     productNumber: new FormControl(''),
@@ -18,15 +19,6 @@ export class NewProduct implements OnInit {
     weight: new FormControl(''),
     date: new FormControl(''),
   });
-
-  Name = this.newProduct.controls.name.value;
-  ProductNumber = this.newProduct.controls.productNumber.value;
-  Color = this.newProduct.controls.color.value;
-  StandartCost = +this.newProduct.controls.color.value;
-  Price = this.newProduct.controls.standartCost.value;
-  Size = +this.newProduct.controls.size.value;
-  Weight = +this.newProduct.controls.weight.value;
-  Date = this.newProduct.controls.date.value;
 
   constructor(private router: Router, private items: ItemsService) {}
 
@@ -39,7 +31,7 @@ export class NewProduct implements OnInit {
         name: this.newProduct.controls.name.value,
         number: this.newProduct.controls.productNumber.value,
         color: this.newProduct.controls.color.value,
-        price: this.newProduct.controls.price.value,
+        price: +this.newProduct.controls.price.value,
         date: this.newProduct.controls.date.value,
         actions: 'add',
         cost: +this.newProduct.controls.standartCost.value,
@@ -49,7 +41,7 @@ export class NewProduct implements OnInit {
     ];
 
     createItem.map((x) => {
-      this.items.items.unshift(x);
+      return this.items.items.unshift(x)
     });
     this.items.fixIds();
     this.router.navigate(['/products']);

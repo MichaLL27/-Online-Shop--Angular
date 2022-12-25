@@ -1,7 +1,7 @@
 <div>
   <h1>Edit Product</h1>
   <div>
-    <form class="forms" action="">
+    <form [formGroup]="newProduct" class="forms">
       <div class="form">
         <div class="form__texts">
           <div>
@@ -12,7 +12,7 @@
             type="text"
             [id]="course.id"
             name="fname"
-            [value]="course.name"
+            formControlName="name"
           />
         </div>
         <div class="form__texts">
@@ -24,7 +24,7 @@
             type="text"
             [id]="course.id"
             name="fname"
-            [value]="course.number"
+            formControlName="productNumber"
           />
         </div>
         <div class="form__texts">
@@ -36,7 +36,7 @@
             type="text"
             [id]="course.id"
             name="fname"
-            [value]="course.color"
+            formControlName="color"
           />
         </div>
         <div class="form__texts">
@@ -45,10 +45,10 @@
           </div>
           <input
             class="form__texts__input"
-            type="text"
+            type="number"
             [id]="course.id"
             name="fname"
-            [value]="course.cost"
+            formControlName="cost"
           />
         </div>
         <div class="form__texts">
@@ -57,10 +57,10 @@
           </div>
           <input
             class="form__texts__input"
-            type="text"
+            type="number"
             [id]="course.id"
             name="fname"
-            [value]="course.price"
+            formControlName="price"
           />
         </div>
         <div class="form__texts">
@@ -69,48 +69,52 @@
           </div>
           <input
             class="form__texts__input"
-            type="text"
+            type="number"
             [id]="course.id"
             name="fname"
-            [value]="course.size"
+            formControlName="size"
           />
         </div>
         <div class="form__texts">
           <div>
-            <h5>Weight:</h5>
+            <h5 for="weight">Weight:</h5>
+          </div>
+          <input
+            class="form__texts__input"
+            type="number"
+            [id]="course.id"
+            name="fname"
+            formControlName="weight"
+          />
+        </div>
+        <div class="form__texts">
+          <div>
+            <h5 for="date">Sell Start Date:</h5>
           </div>
           <input
             class="form__texts__input"
             type="text"
             [id]="course.id"
             name="fname"
-            [value]="course.weight"
-          />
-        </div>
-        <div class="form__texts">
-          <div>
-            <h5>Sell Start Date:</h5>
-          </div>
-          <input
-            class="form__texts__input"
-            type="date"
-            [id]="course.id"
-            name="fname"
-            value="2022-12-17"
             min="2022-12-17"
             max="2023-01-31"
+            formControlName="date"
           />
         </div>
         <div class="form__btn">
           <input
             class="form__btn__save form__btn__same"
-            type="submit"
             value="Save"
+            (click)="update(newProduct.value)"
           />
-          <a class="form__btn__back form__btn__same" href="products"
+          <a
+            class="form__btn__back form__btn__same"
+            [routerLink]="['/products']"
             >Back To List</a
           >
-          <button class="form__btn__delete form__btn__same">Delete</button>
+          <button class="form__btn__delete form__btn__same" (click)="delete()">
+            Delete
+          </button>
         </div>
       </div>
     </form>

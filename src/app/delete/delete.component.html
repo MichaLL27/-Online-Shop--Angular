@@ -110,7 +110,9 @@
             value="Delete the Product!"
             (click)="deleteBtn()"
           />
-          <a class="delete__product__containers__infos__cancel" href="products"
+          <a
+            class="delete__product__containers__infos__cancel"
+            [routerLink]="['/products']"
             >Cancel - Back to List</a
           >
         </div>

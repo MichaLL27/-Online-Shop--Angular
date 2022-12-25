@@ -3,7 +3,7 @@ export interface Item {
   name: string;
   number: string;
   color: string;
-  price: string;
+  price: number;
   date: string;
   actions: string;
   cost: number;
